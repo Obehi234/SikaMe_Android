@@ -5,4 +5,6 @@
     <string name="simplify_splitting_costs_for_individual_n_or_group_expenses">Simplify splitting costs for individual\n or group expenses</string>
     <string name="create_group">Create Group</string>
     <string name="continue_without_creating_group"><![CDATA[Continue without creating group >]]></string>
+    <string name="you_have_no_groups_created">You have no groups created</string>
+    <string name="create_new_group">Create New Group</string>
 </resources>

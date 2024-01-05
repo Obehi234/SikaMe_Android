@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragmentScreens.CreateGroupFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragmentScreens.CreateGroupFragment"
+    android:padding="@dimen/padding_30dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/ivNoGroupsImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/height_300dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:marginVertical="@dimen/padding_30dp"
+        android:src="@drawable/emptystate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvOnboardingHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/brockmann_bold"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:lineSpacingExtra="@dimen/lineSpacing_5dp"
+        android:text="@string/you_have_no_groups_created"
+        android:textSize="@dimen/text_40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivNoGroupsImage" />
+
+    <TextView
+        android:id="@+id/tvCreateGroupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:fontFamily="@font/brockmann_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/lineSpacing_5dp"
+        android:paddingHorizontal="@dimen/margin_10dp"
+        android:text="Create a new group with friends or split individual expenses"
+        android:textSize="@dimen/text_16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOnboardingHeader" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createGroupButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:paddingHorizontal="@dimen/padding_30dp"
+        android:fontFamily="@font/brockmann_bold"
+        android:text="@string/create_new_group"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvCreateGroupText" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
