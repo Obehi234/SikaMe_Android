@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/ivOnbordingImage"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_360dp"
+        android:layout_height="@dimen/height_300dp"
         android:padding="@dimen/padding_15dp"
         android:src="@drawable/home"
         app:layout_constraintEnd_toEndOf="parent"
