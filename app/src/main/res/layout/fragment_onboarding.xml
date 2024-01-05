@@ -12,7 +12,6 @@
         android:id="@+id/ivOnbordingImage"
         android:layout_width="match_parent"
         android:layout_height="360dp"
-        android:layout_marginTop="@dimen/padding_30dp"
         android:padding="@dimen/padding_15dp"
         android:src="@drawable/home"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,18 +19,61 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvOnboardingText"
+        android:id="@+id/tvOnboardingHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/brockmann_bold"
         android:gravity="center"
         android:lineSpacingExtra="@dimen/lineSpacing_5dp"
-        android:text="Create Group\nand add people"
+        android:text="Create groups\nand add people"
         android:textSize="@dimen/text_40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivOnbordingImage" />
+
+    <TextView
+        android:id="@+id/tvOnboardingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15dp"
+        android:fontFamily="@font/brockmann_medium"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/lineSpacing_5dp"
+        android:paddingHorizontal="@dimen/margin_10dp"
+        android:text="Simplify splitting costs for individual\n or group expenses"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOnboardingHeader" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createGroupButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:paddingHorizontal="@dimen/padding_30dp"
+        android:fontFamily="@font/brockmann_bold"
+        android:text="Create Group"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOnboardingText" />
+
+
+    <TextView
+        android:id="@+id/tvOnboardingHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue without creating group >"
+        android:textSize="@dimen/text_12sp"
+        android:fontFamily="@font/brockmann_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createGroupButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
