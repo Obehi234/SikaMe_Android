@@ -43,7 +43,7 @@
         android:gravity="center"
         android:lineSpacingExtra="@dimen/lineSpacing_5dp"
         android:paddingHorizontal="@dimen/margin_10dp"
-        android:text="Create a new group with friends or split individual expenses"
+        android:text="@string/create_a_new_group_with_friends_or_split_individual_expenses"
         android:textSize="@dimen/text_16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,6 +64,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvCreateGroupText" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/createGroup_bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:menu="@menu/bottom_nav_menu"
 
 
 
