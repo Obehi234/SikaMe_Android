@@ -141,7 +141,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvRecentActivities"
-                android:layout_marginTop="@dimen/margin_10dp"/>
+                android:layout_marginTop="@dimen/margin_10dp"
+                tools:listitem="@layout/activities_item"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
