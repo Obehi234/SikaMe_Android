@@ -1,14 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/sikame_white"
+    android:padding="@dimen/padding_15dp"
     tools:context=".fragmentScreens.GroupHomePageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:id="@+id/ivBackNavIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_nav_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvGroupName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:fontFamily="@font/brockmann_medium"
+        android:gravity="center"
+        android:text="The Lazy Co"
+        android:textSize="@dimen/text_20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBackNavIcon" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdDebtBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20dp"
+        android:padding="@dimen/padding_20dp"
+        app:cardBackgroundColor="@color/sikame_card_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGroupName">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_30dp">
+
+            <TextView
+                android:id="@+id/tvpayersDebtBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brockmann_bold"
+                android:text="Overall You Owe"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDebtAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brockmann_medium"
+                android:text="GHC 100"
+                android:textSize="@dimen/margin_20dp"
+                app:layout_constraintStart_toStartOf="@id/tvpayersDebtBalance"
+                app:layout_constraintTop_toBottomOf="@id/tvpayersDebtBalance" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdOutstandingBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_10dp"
+        android:padding="@dimen/padding_10dp"
+        app:cardBackgroundColor="@color/sikame_card_grey"
+        app:layout_constraintBottom_toBottomOf="@+id/cdDebtBalance"
+        app:layout_constraintStart_toEndOf="@id/cdDebtBalance"
+        app:layout_constraintTop_toTopOf="@+id/cdDebtBalance"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_30dp">
+
+            <TextView
+                android:id="@+id/tvpayersOwedBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brockmann_bold"
+                android:text="You Are Owed"
+                android:textSize="@dimen/text_16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvOutstandingAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brockmann_medium"
+                android:text="GHC 100"
+                android:textSize="@dimen/margin_20dp"
+                app:layout_constraintStart_toStartOf="@+id/tvpayersOwedBalance"
+                app:layout_constraintTop_toBottomOf="@+id/tvpayersOwedBalance" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cdDebtOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cdDebtBalance"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragmentScreens.CreateGroupFragment"
-    android:padding="@dimen/padding_30dp">
+    android:padding="@dimen/padding_30dp"
+    android:background="@color/sikame_white">
 
     <ImageView
         android:id="@+id/ivNoGroupsImage"

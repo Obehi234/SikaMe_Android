@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background_white">#F2F2F2</color>
     <color name="green">#9DC5A6</color>
+    <color name="sikame_white">#f2f2f2</color>
+    <color name="sikame_card_grey">#E2E2E2</color>
 </resources>
