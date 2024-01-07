@@ -7,4 +7,6 @@
     <string name="continue_without_creating_group"><![CDATA[Continue without creating group >]]></string>
     <string name="you_have_no_groups_created">You have no groups created</string>
     <string name="create_new_group">Create New Group</string>
+    <string name="ghc_100">GHC 100</string>
+    <string name="breakfast_from_the_good_baker">Breakfast from the good baker</string>
 </resources>
